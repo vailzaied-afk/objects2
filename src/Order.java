@@ -2,8 +2,8 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Order {
-    private String customer;
-    private Product[] basket;
+    String customer;
+    Product[] basket;
 
     public Order(String customer, Product[] items) {
         this.customer = customer;
