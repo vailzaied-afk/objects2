@@ -3,19 +3,19 @@ import java.util.Objects;
 
 public class Order {
     private String customer;
-    private Product[] items;
+    private Product[] basket;
 
     public Order(String customer, Product[] items) {
         this.customer = customer;
-        this.items = items;
+        this.basket = items;
     }
 
     public String getCustomer() {
         return customer;
     }
 
-    public Product[] getItems() {
-        return items;
+    public Product[] getBasket() {
+        return basket;
     }
 
     @Override
@@ -26,13 +26,13 @@ public class Order {
         }
         Order order = (Order) o;
         return Objects.equals(customer, order.customer) &&
-                Arrays.equals(items, order.items);
+                Arrays.equals(basket, order.basket);
 
     }
 
     @Override
     public String toString() {
-        return "Заказ клиента " + customer + ": " + Arrays.toString(items);
+        return "Заказ клиента " + customer + ": " + Arrays.toString(basket);
     }
 
 }
