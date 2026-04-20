@@ -12,7 +12,7 @@ public class Main {
         System.out.println(order1);
         Product[] basket2 = {product3, product4};
         Order order2 = new Order("Корзина 2", basket2);
-        System.out.println(product3.equals(product4));
+        System.out.println(order1.equals(order2));
 
         System.out.println(order2);
 
