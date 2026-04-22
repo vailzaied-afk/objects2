@@ -43,6 +43,7 @@ public class Product {
         return id == product.id && Objects.equals(category, product.category);
 
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(id, category);
