@@ -30,9 +30,14 @@ public class Order {
             return false;
 
         }
-        if (basket == null || order.basket == null) {
-            return basket == order.basket;
+        if (basket == null && order.basket == null) {
+            return true;
         }
+
+        if (basket == null || order.basket == null) {
+            return false;
+        }
+
         if (basket.length != order.basket.length) {
             return false;
         }

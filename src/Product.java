@@ -30,22 +30,31 @@ public class Product {
     }
 
     public String toString() {
-        return "Товар[артикул=" + id + ", название=" + name + ", цена=" + price + ", категория=" + category + "]";
+        return "Товар[артикул=" + this.id + ", название=" + this.name + ", цена=" + this.price + ", категория=" + this.category + "]";
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
+
         Product product = (Product) o;
-        return id == product.id && Objects.equals(category, product.category);
 
+        if (this.id != product.id) {
+            return false;
+        }
+
+        if (this.category == null) {
+            return product.category == null;
+        }
+
+        return this.category.equals(product.category);
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(id, category);
+        return Objects.hash(id, this.category);
     }
 }
