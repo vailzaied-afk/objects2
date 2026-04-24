@@ -43,15 +43,8 @@ public class Product {
 
         Product product = (Product) o;
 
-        if (this.id != product.id) {
-            return false;
-        }
+        return id == product.id && Objects.equals(category, product.category);
 
-        if (this.category == null) {
-            return product.category == null;
-        }
-
-        return this.category.equals(product.category);
     }
     @Override
     public int hashCode() {
